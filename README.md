@@ -9,3 +9,5 @@ Currently registered script(s) :
 ## Nginx-specific configuration:
 
 The file `/cm_configs_default/etc/nginx/nginx.conf.sample` will be provided by default. The `docker-entrypoint` scripts will interpolate env vars into it and produce the final `/etc/nginx/nginx.conf`.
+
+Fork from: https://github.com/Cytomine-ULiege/bigpicture-cytomine-nginx
