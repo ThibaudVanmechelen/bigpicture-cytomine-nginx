@@ -93,6 +93,12 @@ http {
             proxy_pass http://$tmpcbirhost;
         }
 
+        # Internal communication to SAM from other internal micro-services
+        location /sam {
+            set $tmpsamhost "$INTERNAL_URLS_SAM";
+            proxy_pass http://$tmpsamhost;
+        }
+
         # Internal communication to CORE from other internal micro-services.
         # Base path convention: "/api" + special endpoints that should be moved under "/api" base path in the future.
         location ~ /(api|ws|login|logout|saml|saml2|server|session|custom-ui|static) {
